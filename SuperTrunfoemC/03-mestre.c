@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Estrutura para armazenar os dados de uma carta
 typedef struct
 {
     char nome[50];
@@ -13,7 +12,6 @@ typedef struct
     float super_poder;
 } Carta;
 
-// Função para calcular a densidade populacional e PIB per capita
 void calcular_atributos(Carta *carta)
 {
     carta->densidade_populacional = carta->populacao / carta->area;
@@ -21,7 +19,6 @@ void calcular_atributos(Carta *carta)
     carta->super_poder = carta->populacao + carta->area + carta->pib + carta->pontos_turisticos + carta->pib_per_capita + (1 / carta->densidade_populacional);
 }
 
-// Função para ler os dados de uma carta
 void ler_carta(Carta *carta, int numero)
 {
     printf("\nDigite os dados da Carta %d:\n", numero);
@@ -38,7 +35,6 @@ void ler_carta(Carta *carta, int numero)
     calcular_atributos(carta);
 }
 
-// Função para comparar dois valores e imprimir o vencedor
 void comparar_e_exibir(const char *atributo, float valor1, float valor2, int menor_vence)
 {
     int resultado = (menor_vence ? (valor1 < valor2) : (valor1 > valor2)) ? 1 : 0;
@@ -49,11 +45,9 @@ int main()
 {
     Carta carta1, carta2;
 
-    // Leitura das cartas
     ler_carta(&carta1, 1);
     ler_carta(&carta2, 2);
 
-    // Exibição dos resultados da comparação
     printf("\nComparacao de Cartas:\n");
     comparar_e_exibir("Populacao", carta1.populacao, carta2.populacao, 0);
     comparar_e_exibir("Area", carta1.area, carta2.area, 0);
