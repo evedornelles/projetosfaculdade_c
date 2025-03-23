@@ -55,12 +55,11 @@ int main()
 
     // Cálculo da densidade populacional e PIB per capita
     densidade1 = populacao1 / area1;
-    pib_per_capita1 = (pib1 * 1000000000) / populacao1; // Convertendo PIB para reais
+    pib_per_capita1 = (pib1 * 1000000000) / populacao1;
 
     densidade2 = populacao2 / area2;
-    pib_per_capita2 = (pib2 * 1000000000) / populacao2; // Convertendo PIB para reais
+    pib_per_capita2 = (pib2 * 1000000000) / populacao2;
 
-    // Exibição dos resultados
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
