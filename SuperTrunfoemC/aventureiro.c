@@ -2,7 +2,6 @@
 
 int main()
 {
-    // Declaração de variáveis
     char estado1, estado2;
     char codigo1[10], codigo2[10];
     char nome1[50], nome2[50];
@@ -13,13 +12,11 @@ int main()
     float densidade1, densidade2;
     float pib_per_capita1, pib_per_capita2;
 
-    // Entrada de dados para a primeira cidade
     printf("Digite o estado (letra única): ");
     scanf(" %c", &estado1);
     printf("Digite o código da carta: ");
     scanf("%s", codigo1);
 
-    // Limpar o buffer antes de usar fgets
     setbuf(stdin, NULL);
     printf("Digite o nome da cidade: ");
     fgets(nome1, sizeof(nome1), stdin);
@@ -33,13 +30,11 @@ int main()
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontos1);
 
-    // Entrada de dados para a segunda cidade
     printf("\nDigite o estado (letra única): ");
     scanf(" %c", &estado2);
     printf("Digite o código da carta: ");
     scanf("%s", codigo2);
 
-    // Limpar o buffer antes de usar fgets
     setbuf(stdin, NULL);
     printf("Digite o nome da cidade: ");
     fgets(nome2, sizeof(nome2), stdin);
@@ -53,7 +48,6 @@ int main()
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontos2);
 
-    // Cálculo da densidade populacional e PIB per capita
     densidade1 = populacao1 / area1;
     pib_per_capita1 = (pib1 * 1000000000) / populacao1;
 
